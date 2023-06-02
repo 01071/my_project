@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ animal }}!{% endblock %}
+
+{% block body %}
+    <h1>Mamifero</h1>
+    essa é a pagina de detalhes mamiferos {{ animal }}
+
+    {% if animal == "Gato" %}
+     <br>
+        nossa um belo <strong>Gato</strong>!
+    {% endif %}
+
+    {% for respostas in respostas %}
+        <li>
+            {{ respostas }}
+        </li>
+    {% endfor %}
+
+    </ul>
+
+    {%if respostas|length > 3  %}
+     <h2> {{respostas |length }} </h2>
+    {% endif %}
+{% endblock %}
